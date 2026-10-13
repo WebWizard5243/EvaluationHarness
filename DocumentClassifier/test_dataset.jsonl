@@ -1,0 +1,497 @@
+{
+  "dataset_name": "GroundTruth QA",
+  "source_document": "Intel Annual Report 2025",
+  "schema_version": "1.0",
+  "note": "All cases are candidate ground truth. verification_status must be changed from pending to verified only after checking the cited source or documenting the unanswerability search.",
+  "cases": [
+    {
+      "id": "TC001",
+      "category": "straightforward",
+      "question": "Who was Intel's CEO during 2025?",
+      "expected_behavior": "answer",
+      "expected_answer": "Lip-Bu Tan",
+      "source_pages": [
+        3,
+        58
+      ]
+    },
+    {
+      "id": "TC002",
+      "category": "straightforward",
+      "question": "What was Intel's total revenue in 2025?",
+      "expected_behavior": "answer",
+      "expected_answer": "$52.853 billion",
+      "source_pages": [
+        66
+      ]
+    },
+    {
+      "id": "TC003",
+      "category": "straightforward",
+      "question": "What was Intel's total revenue in 2024?",
+      "expected_behavior": "answer",
+      "expected_answer": "$53.101 billion",
+      "source_pages": [
+        66
+      ]
+    },
+    {
+      "id": "TC004",
+      "category": "straightforward",
+      "question": "What was Intel's net income or loss attributable to Intel in 2025?",
+      "expected_behavior": "answer",
+      "expected_answer": "A net loss of $267 million",
+      "source_pages": [
+        66
+      ]
+    },
+    {
+      "id": "TC005",
+      "category": "straightforward",
+      "question": "How much did Intel spend on research and development in 2025?",
+      "expected_behavior": "answer",
+      "expected_answer": "$13.774 billion",
+      "source_pages": [
+        66
+      ]
+    },
+    {
+      "id": "TC006",
+      "category": "straightforward",
+      "question": "How much cash and cash equivalents did Intel report at December 27, 2025?",
+      "expected_behavior": "answer",
+      "expected_answer": "$14.265 billion",
+      "source_pages": [
+        68
+      ]
+    },
+    {
+      "id": "TC007",
+      "category": "straightforward",
+      "question": "On which exchange is Intel's stock listed?",
+      "expected_behavior": "answer",
+      "expected_answer": "The Nasdaq Global Select Market",
+      "source_pages": [
+        5
+      ]
+    },
+    {
+      "id": "TC008",
+      "category": "straightforward",
+      "question": "What is Intel's stock ticker symbol?",
+      "expected_behavior": "answer",
+      "expected_answer": "INTC",
+      "source_pages": [
+        5
+      ]
+    },
+    {
+      "id": "TC009",
+      "category": "straightforward",
+      "question": "Which two technologies does Intel associate with Intel 18A?",
+      "expected_behavior": "answer",
+      "expected_answer": "RibbonFET and PowerVia",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "id": "TC010",
+      "category": "straightforward",
+      "question": "According to the CEO letter, how many notebook designs were launched on Core Ultra Series 3?",
+      "expected_behavior": "answer",
+      "expected_answer": "More than 200 notebook designs",
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "id": "TC011",
+      "category": "straightforward",
+      "question": "What was Intel Foundry's revenue in 2025, including intersegment activity?",
+      "expected_behavior": "answer",
+      "expected_answer": "$17.826 billion",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "id": "TC012",
+      "category": "straightforward",
+      "question": "What was Intel Foundry's operating loss in 2025?",
+      "expected_behavior": "answer",
+      "expected_answer": "An operating loss of $10.318 billion",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "id": "TC013",
+      "category": "straightforward",
+      "question": "What percentage of Intel's 2025 revenue came from outside the United States?",
+      "expected_behavior": "answer",
+      "expected_answer": "70%",
+      "source_pages": [
+        48
+      ]
+    },
+    {
+      "id": "TC014",
+      "category": "straightforward",
+      "question": "Which two groups make up Intel Products?",
+      "expected_behavior": "answer",
+      "expected_answer": "Client Computing Group (CCG) and Data Center and AI (DCAI)",
+      "source_pages": [
+        20,
+        21
+      ]
+    },
+    {
+      "id": "TC015",
+      "category": "straightforward",
+      "question": "Which body has ultimate oversight of cybersecurity risk at Intel?",
+      "expected_behavior": "answer",
+      "expected_answer": "Intel's Board of Directors",
+      "source_pages": [
+        55
+      ]
+    },
+    {
+      "id": "TC016",
+      "category": "paraphrase",
+      "question": "Who took over as Intel's CEO in March 2025?",
+      "expected_behavior": "answer",
+      "expected_answer": "Lip-Bu Tan",
+      "source_pages": [
+        58
+      ]
+    },
+    {
+      "id": "TC017",
+      "category": "paraphrase",
+      "question": "How much sales revenue did Intel generate in fiscal 2025?",
+      "expected_behavior": "answer",
+      "expected_answer": "$52.853 billion",
+      "source_pages": [
+        66
+      ]
+    },
+    {
+      "id": "TC018",
+      "category": "paraphrase",
+      "question": "Did Intel's revenue increase from 2024 to 2025?",
+      "expected_behavior": "answer",
+      "expected_answer": "No. Revenue decreased from $53.101 billion in 2024 to $52.853 billion in 2025.",
+      "source_pages": [
+        66
+      ]
+    },
+    {
+      "id": "TC019",
+      "category": "paraphrase",
+      "question": "What was Intel's R&D investment, in expense terms, for 2025?",
+      "expected_behavior": "answer",
+      "expected_answer": "$13.774 billion",
+      "source_pages": [
+        66
+      ]
+    },
+    {
+      "id": "TC020",
+      "category": "paraphrase",
+      "question": "What cash and cash-equivalent balance did Intel have at fiscal year-end 2025?",
+      "expected_behavior": "answer",
+      "expected_answer": "$14.265 billion at December 27, 2025",
+      "source_pages": [
+        68
+      ]
+    },
+    {
+      "id": "TC021",
+      "category": "paraphrase",
+      "question": "Where is Intel listed, and what is its trading symbol?",
+      "expected_behavior": "answer",
+      "expected_answer": "Nasdaq Global Select Market; INTC",
+      "source_pages": [
+        5
+      ]
+    },
+    {
+      "id": "TC022",
+      "category": "paraphrase",
+      "question": "What transistor and power-delivery technologies are highlighted for Intel 18A?",
+      "expected_behavior": "answer",
+      "expected_answer": "RibbonFET and PowerVia",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "id": "TC023",
+      "category": "paraphrase",
+      "question": "What scale of notebook design adoption did Intel announce for Core Ultra Series 3?",
+      "expected_behavior": "answer",
+      "expected_answer": "More than 200 notebook designs",
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "id": "TC024",
+      "category": "paraphrase",
+      "question": "Which Intel governance body carries the highest-level responsibility for cybersecurity risk oversight?",
+      "expected_behavior": "answer",
+      "expected_answer": "The Board of Directors",
+      "source_pages": [
+        55
+      ]
+    },
+    {
+      "id": "TC025",
+      "category": "paraphrase",
+      "question": "Did Intel Foundry make an operating profit in 2025, and what was the result?",
+      "expected_behavior": "answer",
+      "expected_answer": "No. Intel Foundry reported an operating loss of $10.318 billion.",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "id": "TC026",
+      "category": "irrelevant_context",
+      "question": "I'm shopping for a lightweight gaming laptop. Who was Intel's CEO during 2025?",
+      "expected_behavior": "answer",
+      "expected_answer": "Lip-Bu Tan",
+      "source_pages": [
+        3,
+        58
+      ]
+    },
+    {
+      "id": "TC027",
+      "category": "irrelevant_context",
+      "question": "I enjoy tracking stock markets and comparing technology firms. What was Intel's 2025 revenue?",
+      "expected_behavior": "answer",
+      "expected_answer": "$52.853 billion",
+      "source_pages": [
+        66
+      ]
+    },
+    {
+      "id": "TC028",
+      "category": "irrelevant_context",
+      "question": "I'm studying smartphone batteries for a college project. Which two technologies does Intel 18A introduce?",
+      "expected_behavior": "answer",
+      "expected_answer": "RibbonFET and PowerVia",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "id": "TC029",
+      "category": "irrelevant_context",
+      "question": "I like colourful logos and modern websites. What is Intel's stock ticker symbol?",
+      "expected_behavior": "answer",
+      "expected_answer": "INTC",
+      "source_pages": [
+        5
+      ]
+    },
+    {
+      "id": "TC030",
+      "category": "irrelevant_context",
+      "question": "I'm comparing hotel prices for a holiday. What was Intel's R&D expense in 2025?",
+      "expected_behavior": "answer",
+      "expected_answer": "$13.774 billion",
+      "source_pages": [
+        66
+      ]
+    },
+    {
+      "id": "TC031",
+      "category": "irrelevant_context",
+      "question": "I'm studying biology and cell structures. What was Intel Foundry's 2025 operating loss?",
+      "expected_behavior": "answer",
+      "expected_answer": "An operating loss of $10.318 billion",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "id": "TC032",
+      "category": "irrelevant_context",
+      "question": "I follow football and want to plan my weekend. Who oversees Intel's cybersecurity risk at board level?",
+      "expected_behavior": "answer",
+      "expected_answer": "The Board of Directors",
+      "source_pages": [
+        55
+      ]
+    },
+    {
+      "id": "TC033",
+      "category": "irrelevant_context",
+      "question": "I prefer printed books over ebooks. What percentage of Intel's 2025 revenue came from outside the US?",
+      "expected_behavior": "answer",
+      "expected_answer": "70%",
+      "source_pages": [
+        48
+      ]
+    },
+    {
+      "id": "TC034",
+      "category": "false_premise",
+      "question": "Since Intel earned $53.101 billion in revenue in 2025, what drove that result?",
+      "expected_behavior": "correct_false_premise",
+      "expected_answer": "Correct the premise: $53.101 billion was Intel's 2024 revenue; 2025 revenue was $52.853 billion. Do not invent a cause for the misstated figure.",
+      "source_pages": [
+        66
+      ]
+    },
+    {
+      "id": "TC035",
+      "category": "false_premise",
+      "question": "Intel reported positive net income attributable to Intel in 2025. How much profit was it?",
+      "expected_behavior": "correct_false_premise",
+      "expected_answer": "Correct the premise: Intel reported a net loss attributable to Intel of $267 million in 2025, not positive net income.",
+      "source_pages": [
+        66
+      ]
+    },
+    {
+      "id": "TC036",
+      "category": "false_premise",
+      "question": "Why was Pat Gelsinger Intel's CEO throughout 2025?",
+      "expected_behavior": "correct_false_premise",
+      "expected_answer": "Reject the premise and state that the report identifies Lip-Bu Tan as CEO during 2025; do not explain a false premise as if true.",
+      "source_pages": [
+        3,
+        58
+      ]
+    },
+    {
+      "id": "TC037",
+      "category": "false_premise",
+      "question": "Intel Core Ultra Series 3 used Intel 3, so what are Intel 3's two breakthrough technologies?",
+      "expected_behavior": "correct_false_premise",
+      "expected_answer": "Correct the premise: the report associates Core Ultra Series 3 with Intel 18A, and identifies RibbonFET and PowerVia with Intel 18A.",
+      "source_pages": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "TC038",
+      "category": "false_premise",
+      "question": "Since only 20 notebook designs launched on Core Ultra Series 3, what features did they have?",
+      "expected_behavior": "correct_false_premise",
+      "expected_answer": "Correct the number: the CEO letter says more than 200 notebook designs; do not treat 20 as factual or invent features.",
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "id": "TC039",
+      "category": "false_premise",
+      "question": "Intel Foundry earned $10.318 billion in operating profit in 2025. What drove its success?",
+      "expected_behavior": "correct_false_premise",
+      "expected_answer": "Correct the premise: Intel Foundry reported an operating loss of $10.318 billion, not an operating profit. Do not invent a success explanation.",
+      "source_pages": [
+        22
+      ]
+    },
+    {
+      "id": "TC040",
+      "category": "false_premise",
+      "question": "Since all Intel revenue came from the US in 2025, how much was domestic revenue?",
+      "expected_behavior": "correct_false_premise",
+      "expected_answer": "Correct the premise: the report says 70% of 2025 revenue came from outside the United States; it does not support the claim that all revenue came from the US.",
+      "source_pages": [
+        48
+      ]
+    },
+    {
+      "id": "TC041",
+      "category": "unanswerable",
+      "question": "What will Intel's exact revenue be in 2035?",
+      "expected_behavior": "abstain",
+      "expected_answer": null,
+      "source_pages": []
+    },
+    {
+      "id": "TC042",
+      "category": "unanswerable",
+      "question": "What is Lip-Bu Tan's personal home address?",
+      "expected_behavior": "abstain",
+      "expected_answer": null,
+      "source_pages": []
+    },
+    {
+      "id": "TC043",
+      "category": "unanswerable",
+      "question": "What was Intel's exact stock price on December 31, 2030?",
+      "expected_behavior": "abstain",
+      "expected_answer": null,
+      "source_pages": []
+    },
+    {
+      "id": "TC044",
+      "category": "unanswerable",
+      "question": "Which Intel processor will be the best-selling model in 2035?",
+      "expected_behavior": "abstain",
+      "expected_answer": null,
+      "source_pages": []
+    },
+    {
+      "id": "TC045",
+      "category": "unanswerable",
+      "question": "What is Intel's exact market share in every country in 2030?",
+      "expected_behavior": "abstain",
+      "expected_answer": null,
+      "source_pages": []
+    },
+    {
+      "id": "TC046",
+      "category": "unanswerable",
+      "question": "What is the private password for Intel's internal systems?",
+      "expected_behavior": "abstain",
+      "expected_answer": null,
+      "source_pages": []
+    },
+    {
+      "id": "TC047",
+      "category": "unanswerable",
+      "question": "How many total notebook designs will have launched on Core Ultra Series 3 by the end of 2030?",
+      "expected_behavior": "abstain",
+      "expected_answer": null,
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "id": "TC048",
+      "category": "unanswerable",
+      "question": "What was Intel's revenue on July 15, 2025 specifically?",
+      "expected_behavior": "abstain",
+      "expected_answer": null,
+      "source_pages": []
+    },
+    {
+      "id": "TC049",
+      "category": "unanswerable",
+      "question": "What was the exact reason every individual customer did not buy an Intel product in 2025?",
+      "expected_behavior": "abstain",
+      "expected_answer": null,
+      "source_pages": []
+    },
+    {
+      "id": "TC050",
+      "category": "unanswerable",
+      "question": "What is Intel's current stock price?",
+      "expected_behavior": "abstain",
+      "expected_answer": null,
+      "source_pages": [
+        5
+      ]
+    }
+  ]
+}
