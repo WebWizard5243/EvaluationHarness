@@ -11,6 +11,7 @@ records results to results.jsonl.
 import os
 import sys
 import json
+import time
 import logging
 import argparse
 from pathlib import Path
@@ -180,6 +181,7 @@ def run_evaluation(
     config: Config,
     limit: Optional[int] = None,
     filter_ids: Optional[list[str]] = None,
+    delay: float = 13.0,
 ) -> None:
     """Run evaluation cases and stream results to JSONL output file."""
     # Load test cases
@@ -282,6 +284,11 @@ def run_evaluation(
             out_f.write(json.dumps(record, ensure_ascii=False) + "\n")
             out_f.flush()
 
+            # Pacing delay between cases to stay within free-tier rate limits (5 RPM)
+            if delay > 0 and index < total_count:
+                print(f"      [PAUSE] Waiting {delay:.1f}s to respect API rate limits...")
+                time.sleep(delay)
+
     # Final summary display
     print("=" * 65)
     print("EVALUATION RUN COMPLETE")
@@ -336,6 +343,12 @@ def main() -> None:
         default=None,
         help="Path to source document PDF. Auto-detected from DocumentClassifier/docs if omitted.",
     )
+    parser.add_argument(
+        "--delay",
+        type=float,
+        default=13.0,
+        help="Delay in seconds between test cases to respect API rate limits (default: 13.0s for 5 RPM).",
+    )
 
     args = parser.parse_args()
 
@@ -371,6 +384,7 @@ def main() -> None:
         config=config,
         limit=args.limit,
         filter_ids=args.case_id,
+        delay=args.delay,
     )
 
 

@@ -214,7 +214,7 @@ def _call_gemini(user_prompt: str, config: Config) -> str:
         except Exception as exc:
             last_error = exc
             if attempt < MAX_RETRIES and _is_retryable(exc):
-                wait = RETRY_BACKOFF_BASE ** attempt
+                wait = 15  #RETRY_BACKOFF_BASE ** attempt
                 logger.warning(
                     "Retryable error (attempt %d/%d), waiting %ds: %s",
                     attempt,

@@ -44,7 +44,7 @@ def load_config() -> Config:
             "Copy .env.example to .env and add your API key."
         )
 
-    model = os.getenv("GEMINI_MODEL", "gemini-2.5-flash").strip()
+    model = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite").strip()
 
     try:
         temperature = float(os.getenv("GEMINI_TEMPERATURE", "0.2"))
