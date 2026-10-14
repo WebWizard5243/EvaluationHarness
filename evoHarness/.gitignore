@@ -1,1 +1,15 @@
 __pycache__/
+*.pyc
+
+# Root-level loose artifacts — all output belongs in runs/pipeline_*/
+/results.jsonl
+/scores.jsonl
+/hallucination_results.jsonl
+/calibration_results.json
+/calibration_curve.png
+/failure_clusters.jsonl
+/failure_cluster_report.md
+/cluster_summary.json
+/failure_diagnostics.jsonl
+/pipeline_summary.json
+/pipeline_summary.md

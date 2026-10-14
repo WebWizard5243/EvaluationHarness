@@ -1,0 +1,599 @@
+{
+  "baseline_files": {
+    "results": "baseline/results.jsonl",
+    "scores": "baseline/scores.jsonl"
+  },
+  "candidate_files": {
+    "results": "/Users/kaif/Web Development/internship/HevaAI/evoHarness/runs/regression_20261014_211633/results.jsonl",
+    "scores": "/Users/kaif/Web Development/internship/HevaAI/evoHarness/runs/regression_20261014_211633/scores.jsonl"
+  },
+  "baseline_metrics": {
+    "total_scored": 50,
+    "pass": 35,
+    "fail": 15,
+    "review_or_other": 0,
+    "pass_rate": 0.7,
+    "status_counts": {
+      "PASS": 35,
+      "FAIL": 15
+    }
+  },
+  "candidate_metrics": {
+    "total_scored": 50,
+    "pass": 43,
+    "fail": 7,
+    "review_or_other": 0,
+    "pass_rate": 0.86,
+    "status_counts": {
+      "PASS": 43,
+      "FAIL": 7
+    }
+  },
+  "matched_cases": 50,
+  "baseline_only_ids": [],
+  "candidate_only_ids": [],
+  "changed_statuses": [
+    {
+      "id": "TC006",
+      "category": "straightforward",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS"
+    },
+    {
+      "id": "TC014",
+      "category": "straightforward",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS"
+    },
+    {
+      "id": "TC016",
+      "category": "paraphrase",
+      "baseline_status": "PASS",
+      "candidate_status": "FAIL"
+    },
+    {
+      "id": "TC017",
+      "category": "paraphrase",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS"
+    },
+    {
+      "id": "TC018",
+      "category": "paraphrase",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS"
+    },
+    {
+      "id": "TC020",
+      "category": "paraphrase",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS"
+    },
+    {
+      "id": "TC024",
+      "category": "paraphrase",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS"
+    },
+    {
+      "id": "TC025",
+      "category": "paraphrase",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS"
+    },
+    {
+      "id": "TC027",
+      "category": "irrelevant_context",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS"
+    },
+    {
+      "id": "TC049",
+      "category": "unanswerable",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS"
+    }
+  ],
+  "regressions_pass_to_fail": [
+    {
+      "id": "TC016",
+      "category": "paraphrase",
+      "baseline_status": "PASS",
+      "candidate_status": "FAIL"
+    }
+  ],
+  "improvements_fail_to_pass": [
+    {
+      "id": "TC006",
+      "category": "straightforward",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS"
+    },
+    {
+      "id": "TC014",
+      "category": "straightforward",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS"
+    },
+    {
+      "id": "TC017",
+      "category": "paraphrase",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS"
+    },
+    {
+      "id": "TC018",
+      "category": "paraphrase",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS"
+    },
+    {
+      "id": "TC020",
+      "category": "paraphrase",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS"
+    },
+    {
+      "id": "TC024",
+      "category": "paraphrase",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS"
+    },
+    {
+      "id": "TC025",
+      "category": "paraphrase",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS"
+    },
+    {
+      "id": "TC027",
+      "category": "irrelevant_context",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS"
+    },
+    {
+      "id": "TC049",
+      "category": "unanswerable",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS"
+    }
+  ],
+  "answer_changes": [
+    {
+      "id": "TC002",
+      "category": "straightforward",
+      "baseline_status": "FAIL",
+      "candidate_status": "FAIL",
+      "baseline_answer": "Intel's total Intel Products revenue in 2025 was $49.1 billion (or $49,147 million).",
+      "candidate_answer": "Intel's total Intel Products revenue was $49.1 billion (or $49,147 million) in 2025.",
+      "baseline_abstained": false,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC003",
+      "category": "straightforward",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "baseline_answer": "In 2024, Intel's total consolidated revenue was $53,101 million ($53.1 billion), while total Intel Products revenue was $49.5 billion ($49,471 million).",
+      "candidate_answer": "Intel's total consolidated revenue in 2024 was $53.1 billion (or $53,101 million). Additionally, total Intel Products revenue specifically was $49.5 billion in 2024.",
+      "baseline_abstained": false,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC004",
+      "category": "straightforward",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "baseline_answer": "In 2025, Intel's net income (loss) attributable to Intel was a loss of $267 million.",
+      "candidate_answer": "In 2025, Intel's net income (loss) attributable to Intel was a net loss of $267 million.",
+      "baseline_abstained": false,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC005",
+      "category": "straightforward",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "baseline_answer": "Intel spent $13.8 billion (specifically $13,774 million) on research and development in 2025.",
+      "candidate_answer": "In 2025, Intel spent $13.8 billion (specifically $13,774 million) on research and development.",
+      "baseline_abstained": false,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC006",
+      "category": "straightforward",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS",
+      "baseline_answer": "",
+      "candidate_answer": "Intel reported $14,265 million in cash and cash equivalents as of December 27, 2025.",
+      "baseline_abstained": true,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC007",
+      "category": "straightforward",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "baseline_answer": "Intel's stock is listed on the Nasdaq Global Select Market under the trading symbol INTC.",
+      "candidate_answer": "Intel's common stock is traded on the Nasdaq Global Select Market.",
+      "baseline_abstained": false,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC008",
+      "category": "straightforward",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "baseline_answer": "Intel's stock ticker symbol is INTC.",
+      "candidate_answer": "Intel's common stock trades under the ticker symbol INTC.",
+      "baseline_abstained": false,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC010",
+      "category": "straightforward",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "baseline_answer": "According to the CEO letter, more than 200 notebook designs were launched on Series 3.",
+      "candidate_answer": "According to the CEO letter, more than 200 notebook designs were launched on Core Ultra Series 3.",
+      "baseline_abstained": false,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC011",
+      "category": "straightforward",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "baseline_answer": "Intel Foundry's revenue in 2025, which includes intersegment financial activity, was $17,826 million (or $17.8 billion).",
+      "candidate_answer": "Intel Foundry's revenue in 2025, including intersegment activity, was $17,826 million.",
+      "baseline_abstained": false,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC013",
+      "category": "straightforward",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "baseline_answer": "Sales outside the United States accounted for 70% of Intel's revenue for the fiscal year ended December 27, 2025.",
+      "candidate_answer": "Sales outside the United States accounted for 70% of Intel's total revenue for the fiscal year ended December 27, 2025.",
+      "baseline_abstained": false,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC014",
+      "category": "straightforward",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS",
+      "baseline_answer": "",
+      "candidate_answer": "Intel Products is composed of two operating segments: CCG and DCAI.",
+      "baseline_abstained": true,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC015",
+      "category": "straightforward",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "baseline_answer": "The Board of Directors has ultimate oversight of cybersecurity risk, managing it as a part of the enterprise risk management program.",
+      "candidate_answer": "The Board of Directors has ultimate oversight of cybersecurity risk at Intel, managing it as part of the enterprise risk management program.",
+      "baseline_abstained": false,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC016",
+      "category": "paraphrase",
+      "baseline_status": "PASS",
+      "candidate_status": "FAIL",
+      "baseline_answer": "Lip-Bu Tan became Intel's Chief Executive Officer, with an offer letter dated March 10, 2025, and new hire grants dated March 18, 2025, marking 2025 as his first year as CEO.",
+      "candidate_answer": "",
+      "baseline_abstained": false,
+      "candidate_abstained": true
+    },
+    {
+      "id": "TC017",
+      "category": "paraphrase",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS",
+      "baseline_answer": "",
+      "candidate_answer": "In fiscal 2025 (for the year ended December 27, 2025), Intel generated a total consolidated revenue of $52,853 million.",
+      "baseline_abstained": true,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC018",
+      "category": "paraphrase",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS",
+      "baseline_answer": "",
+      "candidate_answer": "No, Intel's revenue did not increase from 2024 to 2025; instead, it decreased by $248 million to $52.9 billion.",
+      "baseline_abstained": true,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC020",
+      "category": "paraphrase",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS",
+      "baseline_answer": "",
+      "candidate_answer": "Intel had a cash and cash-equivalent balance of $14,265 million at fiscal year-end 2025 (December 27, 2025).",
+      "baseline_abstained": true,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC021",
+      "category": "paraphrase",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "baseline_answer": "Intel's common stock is listed on the Nasdaq Global Select Market and its trading symbol is INTC.",
+      "candidate_answer": "Intel's common stock is traded on the Nasdaq Global Select Market under the symbol INTC.",
+      "baseline_abstained": false,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC022",
+      "category": "paraphrase",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "baseline_answer": "For Intel 18A, the highlighted transistor technology is RibbonFET (an implementation of a gate-all-around transistor), and the highlighted power-delivery technology is PowerVia (an implementation of backside power delivery).",
+      "candidate_answer": "The technologies highlighted for Intel 18A are RibbonFET, which is an implementation of a gate-all-around transistor designed for faster switching speeds in a smaller footprint, and PowerVia, an implementation of backside power delivery designed to optimize signal transmission.",
+      "baseline_abstained": false,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC023",
+      "category": "paraphrase",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "baseline_answer": "Intel announced that more than 200 notebook designs launched on the Intel Core Ultra Series 3, making it the most broadly adopted AI PC platform in Intel's history.",
+      "candidate_answer": "Intel announced that Core Ultra Series 3 powers over 200 notebook designs from leading global partners, making it the most broadly adopted AI PC platform in Intel's history.",
+      "baseline_abstained": false,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC024",
+      "category": "paraphrase",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS",
+      "baseline_answer": "",
+      "candidate_answer": "The Board of Directors holds ultimate oversight responsibility for cybersecurity risk.",
+      "baseline_abstained": true,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC025",
+      "category": "paraphrase",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS",
+      "baseline_answer": "",
+      "candidate_answer": "No, Intel Foundry did not make an operating profit in 2025; instead, it incurred an operating loss of $10,318 million.",
+      "baseline_abstained": true,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC027",
+      "category": "irrelevant_context",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS",
+      "baseline_answer": "",
+      "candidate_answer": "Intel's revenue in 2025 was $52.9 billion.",
+      "baseline_abstained": true,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC028",
+      "category": "irrelevant_context",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "baseline_answer": "Intel 18A introduces two breakthrough technologies: RibbonFET (gate-all-around transistors) and PowerVia (backside power delivery).",
+      "candidate_answer": "Intel 18A introduces two breakthrough industry technologies: RibbonFET (gate-all-around transistors) and PowerVia (backside power delivery).",
+      "baseline_abstained": false,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC032",
+      "category": "irrelevant_context",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "baseline_answer": "At the board level, Intel's cybersecurity program is reviewed and overseen by the Board of Directors, which is assisted by the Audit & Finance Committee.",
+      "candidate_answer": "At the board level, Intel's cybersecurity program is regularly reviewed by the Audit & Finance Committee, which assists the Board of Directors and reports to them.",
+      "baseline_abstained": false,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC034",
+      "category": "false_premise",
+      "baseline_status": "FAIL",
+      "candidate_status": "FAIL",
+      "baseline_answer": "",
+      "candidate_answer": "The premise of the question is contradicted by the provided excerpts, which state that Intel's revenue in 2025 was $52.9 billion (with 2024 revenue being $53.1 billion), rather than $53.101 billion. For 2025, the $52.9 billion revenue result was driven by Intel Products revenue being roughly flat with 2024, primarily because lower CCG revenue was substantially offset by higher DCAI revenue.",
+      "baseline_abstained": true,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC035",
+      "category": "false_premise",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "baseline_answer": "The premise of the question is incorrect. Intel did not report a positive net income attributable to Intel in 2025; rather, it reported a net loss of $267 million.",
+      "candidate_answer": "The excerpts contradict the premise of the question. Intel did not report a positive net income attributable to Intel in 2025; instead, it reported a net loss attributable to Intel of $267 million.",
+      "baseline_abstained": false,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC036",
+      "category": "false_premise",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "baseline_answer": "The excerpts contradict the premise that Pat Gelsinger was Intel's CEO throughout 2025. Intel entered into a retirement and separation agreement with Patrick Gelsinger dated December 1, 2024, and Lip-Bu Tan served as the Chief Executive Officer during 2025, which was noted as his first year as CEO.",
+      "candidate_answer": "The excerpts contradict the premise that Pat Gelsinger was Intel's CEO throughout 2025. Intel experienced CEO transitions in 2024 and 2025, and Patrick Gelsinger entered into a retirement and separation agreement on December 1, 2024. Furthermore, Lip-Bu Tan is listed as the Chief Executive Officer.",
+      "baseline_abstained": false,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC037",
+      "category": "false_premise",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "baseline_answer": "The premise of the question contradicts the provided excerpts. Intel Core Ultra Series 3 is built on Intel 18A, not Intel 3. It is Intel 18A that introduced the two breakthrough technologies, RibbonFET and PowerVia. Intel 3 is instead referenced in relation to the manufacturing of Intel Core Ultra Series 2 products.",
+      "candidate_answer": "The premise of the question is contradicted by the provided documents. Intel Core Ultra Series 3 is manufactured using Intel 18A process technology rather than Intel 3 (which is used for certain versions of Intel Core Ultra Series 2). Additionally, the two breakthrough technologies—RibbonFET and PowerVia—were introduced by Intel 18A, not Intel 3.",
+      "baseline_abstained": false,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC038",
+      "category": "false_premise",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "baseline_answer": "The excerpts contradict the premise that only 20 notebook designs launched on Core Ultra Series 3. Rather, the documents state that more than 200 notebook designs launched on Series 3, making it the most broadly adopted AI PC platform in Intel's history. Series 3 processors are the first compute platform built on Intel 18A—the most advanced semiconductor process technology designed and manufactured in the United States—and introduce two breakthrough industry technologies: RibbonFET (gate-all-around transistors) and PowerVia (backside power delivery).",
+      "candidate_answer": "The excerpts contradict the premise that only 20 notebook designs launched on Core Ultra Series 3, stating instead that more than 200 notebook designs launched. Core Ultra Series 3 is the first compute platform built on Intel 18A, featuring breakthrough technologies such as RibbonFET (gate-all-around transistors) and PowerVia (backside power delivery). Additionally, these mobile processors offer improved CPU, AI, and graphics performance while maintaining power efficiency, making Series 3 the most broadly adopted AI PC platform in Intel's history.",
+      "baseline_abstained": false,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC046",
+      "category": "unanswerable",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "baseline_answer": "",
+      "candidate_answer": "I cannot answer this question because the provided document excerpts do not contain information regarding passwords for Intel's internal systems.",
+      "baseline_abstained": true,
+      "candidate_abstained": true
+    },
+    {
+      "id": "TC047",
+      "category": "unanswerable",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "baseline_answer": "The provided document excerpts do not contain information regarding the number of notebook designs that will have launched on Core Ultra Series 3 by the end of 2030.",
+      "candidate_answer": "",
+      "baseline_abstained": true,
+      "candidate_abstained": true
+    },
+    {
+      "id": "TC049",
+      "category": "unanswerable",
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS",
+      "baseline_answer": "The premise that every individual customer did not buy an Intel product in 2025 is contradicted by the excerpts, as Intel generated $52.9 billion in revenue that year. While certain revenue segments experienced decreases due to factors such as reduced incentives, customer inventory reductions, and supply constraints affecting market demand, customers did continue to purchase Intel products.",
+      "candidate_answer": "I am abstaining from answering because the provided excerpts do not contain information about why every individual customer did not buy an Intel product in 2025.",
+      "baseline_abstained": false,
+      "candidate_abstained": true
+    }
+  ],
+  "abstention_changes": [
+    {
+      "id": "TC006",
+      "category": "straightforward",
+      "baseline_abstained": true,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC014",
+      "category": "straightforward",
+      "baseline_abstained": true,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC016",
+      "category": "paraphrase",
+      "baseline_abstained": false,
+      "candidate_abstained": true
+    },
+    {
+      "id": "TC017",
+      "category": "paraphrase",
+      "baseline_abstained": true,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC018",
+      "category": "paraphrase",
+      "baseline_abstained": true,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC020",
+      "category": "paraphrase",
+      "baseline_abstained": true,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC024",
+      "category": "paraphrase",
+      "baseline_abstained": true,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC025",
+      "category": "paraphrase",
+      "baseline_abstained": true,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC027",
+      "category": "irrelevant_context",
+      "baseline_abstained": true,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC034",
+      "category": "false_premise",
+      "baseline_abstained": true,
+      "candidate_abstained": false
+    },
+    {
+      "id": "TC049",
+      "category": "unanswerable",
+      "baseline_abstained": false,
+      "candidate_abstained": true
+    }
+  ],
+  "by_category": {
+    "straightforward": {
+      "baseline_pass": 12,
+      "baseline_fail": 3,
+      "candidate_pass": 14,
+      "candidate_fail": 1,
+      "regressions": 0,
+      "improvements": 2,
+      "cases": 15
+    },
+    "paraphrase": {
+      "baseline_pass": 4,
+      "baseline_fail": 6,
+      "candidate_pass": 8,
+      "candidate_fail": 2,
+      "regressions": 1,
+      "improvements": 5,
+      "cases": 10
+    },
+    "irrelevant_context": {
+      "baseline_pass": 6,
+      "baseline_fail": 2,
+      "candidate_pass": 7,
+      "candidate_fail": 1,
+      "regressions": 0,
+      "improvements": 1,
+      "cases": 8
+    },
+    "false_premise": {
+      "baseline_pass": 4,
+      "baseline_fail": 3,
+      "candidate_pass": 4,
+      "candidate_fail": 3,
+      "regressions": 0,
+      "improvements": 0,
+      "cases": 7
+    },
+    "unanswerable": {
+      "baseline_pass": 9,
+      "baseline_fail": 1,
+      "candidate_pass": 10,
+      "candidate_fail": 0,
+      "regressions": 0,
+      "improvements": 1,
+      "cases": 10
+    }
+  },
+  "interpretation": "Answer changes require review; they are not automatically regressions. PASS-to-FAIL is the primary regression signal."
+}

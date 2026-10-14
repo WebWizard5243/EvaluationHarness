@@ -109,49 +109,128 @@ class BM25Retriever:
 
         self.avgdl = (sum(self.chunk_lens) / self.N) if self.N > 0 else 1.0
 
+    
     def score_chunk(
         self,
         chunk_idx: int,
         query_tokens: list[str],
         query_text: str,
     ) -> float:
-        """Compute BM25 relevance score for a single chunk."""
+        """Score a chunk using BM25 plus phrase and term-proximity signals."""
         if self.N == 0:
             return 0.0
 
+        chunk = self.chunks[chunk_idx]
+        chunk_text = chunk.text.lower()
         doc_len = self.chunk_lens[chunk_idx]
         counts = self.chunk_token_counts[chunk_idx]
+
         score = 0.0
         terms_matched = 0
 
+        # 1. Existing BM25 term scoring
         for qt in query_tokens:
             if qt in counts:
                 terms_matched += 1
                 n_qt = self.df.get(qt, 0)
-                # BM25 IDF with smoothing
-                idf = math.log((self.N - n_qt + 0.5) / (n_qt + 0.5) + 1.0)
+                idf = math.log(
+                    (self.N - n_qt + 0.5) / (n_qt + 0.5) + 1.0
+                )
                 freq = counts[qt]
-                num = freq * (self.k1 + 1.0)
-                denom = freq + self.k1 * (1.0 - self.b + self.b * (doc_len / self.avgdl))
-                score += idf * (num / denom)
+                numerator = freq * (self.k1 + 1.0)
+                denominator = freq + self.k1 * (
+                    1.0 - self.b + self.b * (doc_len / self.avgdl)
+                )
+                score += idf * (numerator / denominator)
 
-        if terms_matched > 0:
-            # Query term coverage bonus: reward chunks covering more query terms
-            coverage_ratio = terms_matched / len(query_tokens)
-            score *= (1.0 + 0.5 * coverage_ratio)
+        if query_tokens and terms_matched:
+            coverage = terms_matched / len(query_tokens)
+            score *= 1.0 + 0.5 * coverage
 
-        # Exact substring bonus (e.g. key phrases, identifiers, names)
-        chunk_lower = self.chunks[chunk_idx].text.lower()
-        query_lower = query_text.lower().strip("?.,! ")
-        if len(query_lower) > 3 and query_lower in chunk_lower:
-            score += 15.0
+        # 2. Phrase bonus: use original text so stopwords like "and"
+        #    are retained. Test progressively shorter query n-grams.
+        normalized_query = re.sub(
+            r"\s+", " ", query_text.lower()
+        ).strip(" ?.,!;:")
+
+        normalized_chunk = re.sub(
+            r"\s+", " ", chunk_text
+        )
+
+        query_words = re.findall(r"\b[\w.-]+\b", normalized_query)
+        phrase_bonus = 0.0
+
+        # Longer exact phrases are more informative than shorter ones.
+        max_n = min(5, len(query_words))
+        for n in range(2, max_n + 1):
+            for start in range(len(query_words) - n + 1):
+                phrase = " ".join(query_words[start:start + n])
+
+                if phrase in normalized_chunk:
+                    phrase_bonus += 0.5 * (n - 1)
+
+        score += phrase_bonus
+
+        # 3. Proximity bonus: reward chunks where query terms occur
+        #    close together, even if punctuation separates them.
+        positions = {}
+        for token in set(query_tokens):
+            matches = [
+                m.start()
+                for m in re.finditer(
+                    rf"\b{re.escape(token)}\b", normalized_chunk
+                )
+            ]
+            if matches:
+                positions[token] = matches
+
+        matched_terms = list(positions.keys())
+
+        if len(matched_terms) >= 2:
+            # Find the narrowest span covering all matched query terms.
+            occurrences = sorted(
+                (pos, token)
+                for token, offsets in positions.items()
+                for pos in offsets
+            )
+
+            left = 0
+            window_counts = {}
+            best_span = len(normalized_chunk)
+            required = len(matched_terms)
+
+            for right, (pos, token) in enumerate(occurrences):
+                window_counts[token] = window_counts.get(token, 0) + 1
+
+                while len(window_counts) == required:
+                    best_span = min(
+                        best_span,
+                        occurrences[right][0] - occurrences[left][0],
+                    )
+                    left_token = occurrences[left][1]
+                    window_counts[left_token] -= 1
+                    if window_counts[left_token] == 0:
+                        del window_counts[left_token]
+                    left += 1
+
+            # Closer terms receive a larger bonus.
+            score += 3.0 * required / (1.0 + best_span / 100.0)
+
+        # 4. Combined-condition bonus: reward chunks that contain
+        #    all searchable query terms, not just a partial overlap.
+        if query_tokens and terms_matched == len(set(query_tokens)):
+            score += 2.0
 
         return score
 
+
+
+    
+    
     def retrieve(
         self,
         query: str,
-        top_k: int = 5,
+        top_k: int = 10,
         min_score: float = 0.01,
     ) -> list[DocumentChunk]:
         """Retrieve the top_k most relevant chunks for a question."""
@@ -221,7 +300,7 @@ class ProcessedDocument:
         self.report = report
         self.retriever = BM25Retriever(chunks)
 
-    def retrieve(self, query: str, top_k: int = 5) -> list[DocumentChunk]:
+    def retrieve(self, query: str, top_k: int = 10) -> list[DocumentChunk]:
         """Retrieve the most relevant chunks for the given query."""
         return self.retriever.retrieve(query=query, top_k=top_k)
 

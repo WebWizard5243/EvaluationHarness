@@ -1,0 +1,15 @@
+=== calibration ===
+Start: 2026-10-14T23:13:00.334280
+Command: /Users/kaif/Web Development/internship/HevaAI/DocumentClassifier/.venv/bin/python /Users/kaif/Web Development/internship/HevaAI/evoHarness/calibration.py --results /Users/kaif/Web Development/internship/HevaAI/evoHarness/runs/pipeline_20261014_224743/results.jsonl --scores /Users/kaif/Web Development/internship/HevaAI/evoHarness/runs/pipeline_20261014_224743/scores.jsonl --output /Users/kaif/Web Development/internship/HevaAI/evoHarness/runs/pipeline_20261014_224743/calibration_results.json --plot /Users/kaif/Web Development/internship/HevaAI/evoHarness/runs/pipeline_20261014_224743/calibration_curve.png
+
+
+===== CONFIDENCE CALIBRATION =====
+Answered and scored cases: 37
+Brier score: 0.0741
+Expected Calibration Error: 0.0757
+Saved /Users/kaif/Web Development/internship/HevaAI/evoHarness/runs/pipeline_20261014_224743/calibration_curve.png
+Saved calibration metrics to: /Users/kaif/Web Development/internship/HevaAI/evoHarness/runs/pipeline_20261014_224743/calibration_results.json
+
+End: 2026-10-14T23:13:01.497636
+Exit code: 0
+Duration: 1.16s

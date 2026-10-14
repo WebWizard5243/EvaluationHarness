@@ -1,12 +1,3 @@
-#!/usr/bin/env python3
-"""
-Adversarial Evaluation Harness — Test Runner.
-
-Executes test cases from test_dataset.json against the GroundTruth QA application.
-Reuses the indexed document (BM25 retriever) across all queries, captures structured
-actual responses alongside expected ground truth, handles failures gracefully, and
-records results to results.jsonl.
-"""
 
 import os
 import sys
@@ -212,6 +203,8 @@ def run_evaluation(
         chunk_size=config.chunk_size,
         chunk_overlap=config.chunk_overlap,
     )
+
+    
     logger.info(
         "Document indexed successfully: %d pages, %d chunks.",
         processed_doc.report.extracted_pages,

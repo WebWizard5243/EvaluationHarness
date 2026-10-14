@@ -1,3 +1,4 @@
+import argparse
 import json
 from pathlib import Path
 import matplotlib.pyplot as plt
@@ -82,16 +83,44 @@ def calculate_metrics(observations, bins=5):
 
 
 def main():
-    results = load_jsonl("results.jsonl")
-    scores = load_jsonl("scores.jsonl")
+    parser = argparse.ArgumentParser(description="Calculate confidence calibration metrics.")
+    parser.add_argument("--results", default="results.jsonl", help="Results JSONL file path.")
+    parser.add_argument("--scores", default="scores.jsonl", help="Scores JSONL file path.")
+    parser.add_argument("--output", default=None, help="Optional output JSON path for calibration metrics.")
+    parser.add_argument("--plot", default="calibration_curve.png", help="Path to save reliability diagram.")
+    parser.add_argument("--bins", type=int, default=5, help="Number of calibration bins.")
+    args = parser.parse_args()
+
+    results = load_jsonl(args.results)
+    scores = load_jsonl(args.scores)
 
     observations = collect_observations(results, scores)
-    brier, ece, bins = calculate_metrics(observations)
+    
+    if not observations:
+        print("\n===== CONFIDENCE CALIBRATION =====")
+        print("Answered and scored cases: 0")
+        print("Warning: No scored, answered cases available for calibration.")
+        metrics = {
+            "answered_and_scored_cases": 0,
+            "brier_score": None,
+            "expected_calibration_error": None,
+            "bins": [],
+        }
+        if args.output:
+            out_p = Path(args.output)
+            out_p.parent.mkdir(parents=True, exist_ok=True)
+            out_p.write_text(json.dumps(metrics, indent=2), encoding="utf-8")
+        return
+
+    brier, ece, bins = calculate_metrics(observations, bins=args.bins)
 
     print("\n===== CONFIDENCE CALIBRATION =====")
     print(f"Answered and scored cases: {len(observations)}")
     print(f"Brier score: {brier:.4f}")
     print(f"Expected Calibration Error: {ece:.4f}")
+
+    plot_path = Path(args.plot)
+    plot_path.parent.mkdir(parents=True, exist_ok=True)
 
     plt.figure(figsize=(7, 6))
     plt.plot([0, 1], [0, 1], "--", label="Perfect calibration")
@@ -109,9 +138,23 @@ def main():
     plt.grid(alpha=0.3)
     plt.legend()
     plt.tight_layout()
-    plt.savefig("calibration_curve.png", dpi=160)
+    plt.savefig(plot_path, dpi=160)
+    plt.close()
 
-    print("Saved calibration_curve.png")
+    print(f"Saved {plot_path}")
+
+    metrics = {
+        "answered_and_scored_cases": len(observations),
+        "brier_score": round(brier, 4),
+        "expected_calibration_error": round(ece, 4),
+        "bins": bins,
+    }
+
+    if args.output:
+        out_p = Path(args.output)
+        out_p.parent.mkdir(parents=True, exist_ok=True)
+        out_p.write_text(json.dumps(metrics, indent=2), encoding="utf-8")
+        print(f"Saved calibration metrics to: {out_p}")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,372 @@
+=== evaluate ===
+Start: 2026-10-14T22:47:43.977161
+Command: /Users/kaif/Web Development/internship/HevaAI/DocumentClassifier/.venv/bin/python /Users/kaif/Web Development/internship/HevaAI/evoHarness/evaluate.py --dataset /Users/kaif/Web Development/internship/HevaAI/evoHarness/test_dataset.json --output /Users/kaif/Web Development/internship/HevaAI/evoHarness/runs/pipeline_20261014_224743/results.jsonl --delay 13.0
+
+22:47:44 [INFO] Loading test cases from: /Users/kaif/Web Development/internship/HevaAI/evoHarness/test_dataset.json
+22:47:44 [INFO] Loaded 50 test cases in total.
+22:47:44 [INFO] Indexing source document: IntelCompanyDocumentation.pdf (/Users/kaif/Web Development/internship/HevaAI/DocumentClassifier/docs/IntelCompanyDocumentation.pdf)
+22:47:44 [INFO] Building BM25 retriever index (this happens once and is reused for all cases)...
+22:47:50 [INFO] Document indexed successfully: 126 pages, 1154 chunks.
+22:47:50 [INFO] Starting test execution -> streaming results to: /Users/kaif/Web Development/internship/HevaAI/evoHarness/runs/pipeline_20261014_224743/results.jsonl
+
+22:47:50 [INFO] AFC is enabled with max remote calls: 10.
+22:47:54 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:48:07 [INFO] AFC is enabled with max remote calls: 10.
+22:48:12 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:48:25 [INFO] AFC is enabled with max remote calls: 10.
+22:48:28 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:48:42 [INFO] AFC is enabled with max remote calls: 10.
+22:48:45 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:48:58 [INFO] AFC is enabled with max remote calls: 10.
+22:49:01 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:49:14 [INFO] AFC is enabled with max remote calls: 10.
+22:49:17 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:49:30 [INFO] AFC is enabled with max remote calls: 10.
+22:49:32 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:49:45 [INFO] AFC is enabled with max remote calls: 10.
+22:49:47 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:50:00 [INFO] AFC is enabled with max remote calls: 10.
+22:50:03 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:50:16 [INFO] AFC is enabled with max remote calls: 10.
+22:50:19 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:50:32 [INFO] AFC is enabled with max remote calls: 10.
+22:50:35 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:50:48 [INFO] AFC is enabled with max remote calls: 10.
+22:50:50 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:51:04 [INFO] AFC is enabled with max remote calls: 10.
+22:51:05 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:51:19 [INFO] AFC is enabled with max remote calls: 10.
+22:51:21 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:51:34 [INFO] AFC is enabled with max remote calls: 10.
+22:51:36 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:51:49 [INFO] AFC is enabled with max remote calls: 10.
+22:51:54 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:52:07 [INFO] AFC is enabled with max remote calls: 10.
+22:52:10 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:52:23 [INFO] AFC is enabled with max remote calls: 10.
+22:52:25 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:52:38 [INFO] AFC is enabled with max remote calls: 10.
+22:52:42 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:52:55 [INFO] AFC is enabled with max remote calls: 10.
+22:52:57 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:53:10 [INFO] AFC is enabled with max remote calls: 10.
+22:53:12 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:53:25 [INFO] AFC is enabled with max remote calls: 10.
+22:53:28 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:53:41 [INFO] AFC is enabled with max remote calls: 10.
+22:53:44 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:53:58 [INFO] AFC is enabled with max remote calls: 10.
+22:53:59 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:54:13 [INFO] AFC is enabled with max remote calls: 10.
+22:54:17 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:54:30 [INFO] AFC is enabled with max remote calls: 10.
+22:54:33 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:54:46 [INFO] AFC is enabled with max remote calls: 10.
+22:54:48 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:55:01 [INFO] AFC is enabled with max remote calls: 10.
+22:55:06 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:55:20 [INFO] AFC is enabled with max remote calls: 10.
+22:55:22 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:55:35 [INFO] AFC is enabled with max remote calls: 10.
+22:55:39 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:55:53 [INFO] AFC is enabled with max remote calls: 10.
+22:55:55 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:56:09 [INFO] AFC is enabled with max remote calls: 10.
+22:56:11 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:56:24 [INFO] AFC is enabled with max remote calls: 10.
+22:56:26 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:56:40 [INFO] AFC is enabled with max remote calls: 10.
+22:56:44 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:56:57 [INFO] AFC is enabled with max remote calls: 10.
+22:57:00 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:57:13 [INFO] AFC is enabled with max remote calls: 10.
+22:57:18 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:57:31 [INFO] AFC is enabled with max remote calls: 10.
+22:57:35 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:57:48 [INFO] AFC is enabled with max remote calls: 10.
+22:57:51 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:58:04 [INFO] AFC is enabled with max remote calls: 10.
+22:58:08 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:58:21 [INFO] AFC is enabled with max remote calls: 10.
+22:58:25 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:58:38 [INFO] AFC is enabled with max remote calls: 10.
+22:58:40 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:58:53 [INFO] AFC is enabled with max remote calls: 10.
+22:58:56 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:59:09 [INFO] AFC is enabled with max remote calls: 10.
+22:59:11 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:59:24 [INFO] AFC is enabled with max remote calls: 10.
+22:59:26 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:59:39 [INFO] AFC is enabled with max remote calls: 10.
+22:59:41 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+22:59:55 [INFO] AFC is enabled with max remote calls: 10.
+22:59:56 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+23:00:10 [INFO] AFC is enabled with max remote calls: 10.
+23:00:12 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+23:00:25 [INFO] AFC is enabled with max remote calls: 10.
+23:00:28 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+23:00:41 [INFO] AFC is enabled with max remote calls: 10.
+23:00:45 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+23:00:58 [INFO] AFC is enabled with max remote calls: 10.
+23:01:00 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+[1/50] Case TC001 [straightforward]
+      Question: Who was Intel's CEO during 2025?
+      [OK] Status: Answered (conf=90%, pages=[3, 124])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[2/50] Case TC002 [straightforward]
+      Question: What was Intel's total revenue in 2025?
+      [OK] Status: Answered (conf=90%, pages=[27, 28])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[3/50] Case TC003 [straightforward]
+      Question: What was Intel's total revenue in 2024?
+      [OK] Status: Answered (conf=100%, pages=[28, 31, 80])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[4/50] Case TC004 [straightforward]
+      Question: What was Intel's net income or loss attributable to Intel in 2025?
+      [OK] Status: Answered (conf=100%, pages=[31, 66, 83])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[5/50] Case TC005 [straightforward]
+      Question: How much did Intel spend on research and development in 2025?
+      [OK] Status: Answered (conf=100%, pages=[20, 31])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[6/50] Case TC006 [straightforward]
+      Question: How much cash and cash equivalents did Intel report at December 27, 2025?
+      [OK] Status: Answered (conf=100%, pages=[36])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[7/50] Case TC007 [straightforward]
+      Question: On which exchange is Intel's stock listed?
+      [OK] Status: Answered (conf=100%, pages=[5, 59, 125])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[8/50] Case TC008 [straightforward]
+      Question: What is Intel's stock ticker symbol?
+      [OK] Status: Answered (conf=100%, pages=[59, 125])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[9/50] Case TC009 [straightforward]
+      Question: Which two technologies does Intel associate with Intel 18A?
+      [OK] Status: Answered (conf=100%, pages=[2])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[10/50] Case TC010 [straightforward]
+      Question: According to the CEO letter, how many notebook designs were launched on Core Ultra Series ...
+      [OK] Status: Answered (conf=100%, pages=[3])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[11/50] Case TC011 [straightforward]
+      Question: What was Intel Foundry's revenue in 2025, including intersegment activity?
+      [OK] Status: Answered (conf=100%, pages=[29, 80])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[12/50] Case TC012 [straightforward]
+      Question: What was Intel Foundry's operating loss in 2025?
+      [OK] Status: Answered (conf=100%, pages=[29])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[13/50] Case TC013 [straightforward]
+      Question: What percentage of Intel's 2025 revenue came from outside the United States?
+      [OK] Status: Answered (conf=100%, pages=[48])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[14/50] Case TC014 [straightforward]
+      Question: Which two groups make up Intel Products?
+      [OK] Status: Answered (conf=100%, pages=[12, 27])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[15/50] Case TC015 [straightforward]
+      Question: Which body has ultimate oversight of cybersecurity risk at Intel?
+      [OK] Status: Answered (conf=100%, pages=[60])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[16/50] Case TC016 [paraphrase]
+      Question: Who took over as Intel's CEO in March 2025?
+      [OK] Status: Answered (conf=70%, pages=[120, 124])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[17/50] Case TC017 [paraphrase]
+      Question: How much sales revenue did Intel generate in fiscal 2025?
+      [OK] Status: Answered (conf=100%, pages=[80])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[18/50] Case TC018 [paraphrase]
+      Question: Did Intel's revenue increase from 2024 to 2025?
+      [OK] Status: Answered (conf=100%, pages=[31])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[19/50] Case TC019 [paraphrase]
+      Question: What was Intel's R&D investment, in expense terms, for 2025?
+      [OK] Status: Abstained (The provided excerpts only giv...)
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[20/50] Case TC020 [paraphrase]
+      Question: What cash and cash-equivalent balance did Intel have at fiscal year-end 2025?
+      [OK] Status: Answered (conf=100%, pages=[68])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[21/50] Case TC021 [paraphrase]
+      Question: Where is Intel listed, and what is its trading symbol?
+      [OK] Status: Answered (conf=100%, pages=[5, 59, 125])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[22/50] Case TC022 [paraphrase]
+      Question: What transistor and power-delivery technologies are highlighted for Intel 18A?
+      [OK] Status: Answered (conf=100%, pages=[2, 18])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[23/50] Case TC023 [paraphrase]
+      Question: What scale of notebook design adoption did Intel announce for Core Ultra Series 3?
+      [OK] Status: Answered (conf=100%, pages=[2, 3])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[24/50] Case TC024 [paraphrase]
+      Question: Which Intel governance body carries the highest-level responsibility for cybersecurity ris...
+      [OK] Status: Answered (conf=100%, pages=[60])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[25/50] Case TC025 [paraphrase]
+      Question: Did Intel Foundry make an operating profit in 2025, and what was the result?
+      [OK] Status: Answered (conf=100%, pages=[80])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[26/50] Case TC026 [irrelevant_context]
+      Question: I'm shopping for a lightweight gaming laptop. Who was Intel's CEO during 2025?
+      [OK] Status: Answered (conf=90%, pages=[3, 124])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[27/50] Case TC027 [irrelevant_context]
+      Question: I enjoy tracking stock markets and comparing technology firms. What was Intel's 2025 reven...
+      [OK] Status: Answered (conf=100%, pages=[31])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[28/50] Case TC028 [irrelevant_context]
+      Question: I'm studying smartphone batteries for a college project. Which two technologies does Intel...
+      [OK] Status: Answered (conf=90%, pages=[2])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[29/50] Case TC029 [irrelevant_context]
+      Question: I like colourful logos and modern websites. What is Intel's stock ticker symbol?
+      [OK] Status: Answered (conf=100%, pages=[59, 125])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[30/50] Case TC030 [irrelevant_context]
+      Question: I'm comparing hotel prices for a holiday. What was Intel's R&D expense in 2025?
+      [OK] Status: Abstained (The provided excerpts do not s...)
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[31/50] Case TC031 [irrelevant_context]
+      Question: I'm studying biology and cell structures. What was Intel Foundry's 2025 operating loss?
+      [OK] Status: Answered (conf=100%, pages=[29])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[32/50] Case TC032 [irrelevant_context]
+      Question: I follow football and want to plan my weekend. Who oversees Intel's cybersecurity risk at ...
+      [OK] Status: Answered (conf=100%, pages=[60])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[33/50] Case TC033 [irrelevant_context]
+      Question: I prefer printed books over ebooks. What percentage of Intel's 2025 revenue came from outs...
+      [OK] Status: Answered (conf=100%, pages=[48])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[34/50] Case TC034 [false_premise]
+      Question: Since Intel earned $53.101 billion in revenue in 2025, what drove that result?
+      [OK] Status: Answered (conf=90%, pages=[31])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[35/50] Case TC035 [false_premise]
+      Question: Intel reported positive net income attributable to Intel in 2025. How much profit was it?
+      [OK] Status: Answered (conf=100%, pages=[66])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[36/50] Case TC036 [false_premise]
+      Question: Why was Pat Gelsinger Intel's CEO throughout 2025?
+      [OK] Status: Answered (conf=100%, pages=[3, 54, 120, 124])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[37/50] Case TC037 [false_premise]
+      Question: Intel Core Ultra Series 3 used Intel 3, so what are Intel 3's two breakthrough technologie...
+      [OK] Status: Answered (conf=100%, pages=[2, 15])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[38/50] Case TC038 [false_premise]
+      Question: Since only 20 notebook designs launched on Core Ultra Series 3, what features did they hav...
+      [OK] Status: Answered (conf=100%, pages=[3])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[39/50] Case TC039 [false_premise]
+      Question: Intel Foundry earned $10.318 billion in operating profit in 2025. What drove its success?
+      [OK] Status: Abstained (The provided document excerpts...)
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[40/50] Case TC040 [false_premise]
+      Question: Since all Intel revenue came from the US in 2025, how much was domestic revenue?
+      [OK] Status: Abstained (The provided excerpts do not c...)
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[41/50] Case TC041 [unanswerable]
+      Question: What will Intel's exact revenue be in 2035?
+      [OK] Status: Abstained (The provided document excerpts...)
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[42/50] Case TC042 [unanswerable]
+      Question: What is Lip-Bu Tan's personal home address?
+      [OK] Status: Abstained (The provided document excerpts...)
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[43/50] Case TC043 [unanswerable]
+      Question: What was Intel's exact stock price on December 31, 2030?
+      [OK] Status: Abstained (The provided document excerpts...)
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[44/50] Case TC044 [unanswerable]
+      Question: Which Intel processor will be the best-selling model in 2035?
+      [OK] Status: Abstained (The provided excerpts do not c...)
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[45/50] Case TC045 [unanswerable]
+      Question: What is Intel's exact market share in every country in 2030?
+      [OK] Status: Abstained (The excerpts do not contain an...)
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[46/50] Case TC046 [unanswerable]
+      Question: What is the private password for Intel's internal systems?
+      [OK] Status: Abstained (The provided document excerpts...)
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[47/50] Case TC047 [unanswerable]
+      Question: How many total notebook designs will have launched on Core Ultra Series 3 by the end of 20...
+      [OK] Status: Abstained (The provided excerpts do not c...)
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[48/50] Case TC048 [unanswerable]
+      Question: What was Intel's revenue on July 15, 2025 specifically?
+      [OK] Status: Abstained (The provided document excerpts...)
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[49/50] Case TC049 [unanswerable]
+      Question: What was the exact reason every individual customer did not buy an Intel product in 2025?
+      [OK] Status: Answered (conf=100%, pages=[31])
+
+      [PAUSE] Waiting 13.0s to respect API rate limits...
+[50/50] Case TC050 [unanswerable]
+      Question: What is Intel's current stock price?
+      [OK] Status: Abstained (The provided excerpts do not c...)
+
+=================================================================
+EVALUATION RUN COMPLETE
+=================================================================
+Total Cases:     50
+Completed:       50
+Failed (Errors): 0
+Saved Results:   /Users/kaif/Web Development/internship/HevaAI/evoHarness/runs/pipeline_20261014_224743/results.jsonl
+=================================================================
+
+End: 2026-10-14T23:01:00.873194
+Exit code: 0
+Duration: 796.90s

@@ -117,6 +117,7 @@ def ask(
         query=question,
         top_k=config.top_k_chunks,
     )
+    
 
     if not retrieved_chunks:
         return QAResponse(

@@ -1,0 +1,257 @@
+{
+  "total_failed": 7,
+  "num_clusters": 5,
+  "clusters": [
+    {
+      "name": "indexed_answer_clue_missing_from_top_k",
+      "expected_behavior": "answer",
+      "count": 3,
+      "case_ids": [
+        "TC002",
+        "TC019",
+        "TC030"
+      ],
+      "categories": [
+        "irrelevant_context",
+        "paraphrase",
+        "straightforward"
+      ],
+      "cases": [
+        {
+          "id": "TC002",
+          "category": "straightforward",
+          "question": "What was Intel's total revenue in 2025?",
+          "expected_behavior": "answer",
+          "expected_answer": "$52.853 billion",
+          "actual_answer": "In 2025, Total Intel Products revenue was $49.1 billion (or $49,147 million).",
+          "abstained": false,
+          "confidence": 0.9,
+          "score_status": "FAIL",
+          "failure_type": "incorrect_answer",
+          "score_reason": "The actual answer provides the Total Intel Products revenue ($49.1 billion), but the reference answer for Intel's total overall revenue is $52.853 billion, meaning the system provided a different metric.",
+          "diagnostic_observation": "An expected-answer clue occurs in the indexed corpus but not in top-k; this is a retrieval miss signal, though the raw abstention field does not confirm abstention.",
+          "retrieved_pages": [
+            28,
+            28,
+            80,
+            80,
+            27,
+            27,
+            33,
+            32,
+            32,
+            33
+          ]
+        },
+        {
+          "id": "TC019",
+          "category": "paraphrase",
+          "question": "What was Intel's R&D investment, in expense terms, for 2025?",
+          "expected_behavior": "answer",
+          "expected_answer": "$13.774 billion",
+          "actual_answer": "",
+          "abstained": true,
+          "confidence": 0.0,
+          "score_status": "FAIL",
+          "failure_type": "false_abstention",
+          "score_reason": "The application abstained when an answer was expected.",
+          "diagnostic_observation": "An expected-answer clue occurs in the indexed corpus but not in top-k; consistent with a retrieval miss. The scorer labels this as a false abstention.",
+          "retrieved_pages": [
+            79,
+            86,
+            79,
+            86,
+            94,
+            112,
+            39,
+            39,
+            33,
+            33
+          ]
+        },
+        {
+          "id": "TC030",
+          "category": "irrelevant_context",
+          "question": "I'm comparing hotel prices for a holiday. What was Intel's R&D expense in 2025?",
+          "expected_behavior": "answer",
+          "expected_answer": "$13.774 billion",
+          "actual_answer": "",
+          "abstained": true,
+          "confidence": 1.0,
+          "score_status": "FAIL",
+          "failure_type": "false_abstention",
+          "score_reason": "The application abstained when an answer was expected.",
+          "diagnostic_observation": "An expected-answer clue occurs in the indexed corpus but not in top-k; consistent with a retrieval miss. The scorer labels this as a false abstention.",
+          "retrieved_pages": [
+            79,
+            79,
+            39,
+            39,
+            108,
+            108,
+            33,
+            33,
+            41,
+            87
+          ]
+        }
+      ]
+    },
+    {
+      "name": "answer_clue_in_top_k_but_abstained",
+      "expected_behavior": "correct_false_premise",
+      "count": 1,
+      "case_ids": [
+        "TC040"
+      ],
+      "categories": [
+        "false_premise"
+      ],
+      "cases": [
+        {
+          "id": "TC040",
+          "category": "false_premise",
+          "question": "Since all Intel revenue came from the US in 2025, how much was domestic revenue?",
+          "expected_behavior": "correct_false_premise",
+          "expected_answer": "Correct the premise: the report says 70% of 2025 revenue came from outside the United States; it does not support the claim that all revenue came from the US.",
+          "actual_answer": "I am unable to determine the domestic revenue because the provided excerpts do not contain any information regarding geographic revenue breakdown or whether all revenue came from the US.",
+          "abstained": true,
+          "confidence": 1.0,
+          "score_status": "FAIL",
+          "failure_type": "failure_to_correct_false_premise",
+          "score_reason": "The application abstained instead of correcting the false premise.",
+          "diagnostic_observation": "An expected-answer clue occurs in retrieved text although the QA response abstained.",
+          "retrieved_pages": [
+            28,
+            31,
+            28,
+            31,
+            29,
+            80,
+            29,
+            30,
+            80,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "name": "answered_when_abstention_expected",
+      "expected_behavior": "abstain",
+      "count": 1,
+      "case_ids": [
+        "TC049"
+      ],
+      "categories": [
+        "unanswerable"
+      ],
+      "cases": [
+        {
+          "id": "TC049",
+          "category": "unanswerable",
+          "question": "What was the exact reason every individual customer did not buy an Intel product in 2025?",
+          "expected_behavior": "abstain",
+          "expected_answer": "",
+          "actual_answer": "The premise that every individual customer did not buy an Intel product in 2025 is contradicted by the document, which reports that the company generated $52.9 billion in revenue in 2025, demonstrating that customers did purchase Intel products.",
+          "abstained": false,
+          "confidence": 1.0,
+          "score_status": "FAIL",
+          "failure_type": "failure_to_abstain",
+          "score_reason": "The application answered when abstention was expected.",
+          "diagnostic_observation": "The system answered a case whose expected behavior was abstention.",
+          "retrieved_pages": [
+            125,
+            18,
+            125,
+            18,
+            31,
+            31,
+            21,
+            48,
+            14,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "false_premise_not_corrected",
+      "expected_behavior": "correct_false_premise",
+      "count": 1,
+      "case_ids": [
+        "TC034"
+      ],
+      "categories": [
+        "false_premise"
+      ],
+      "cases": [
+        {
+          "id": "TC034",
+          "category": "false_premise",
+          "question": "Since Intel earned $53.101 billion in revenue in 2025, what drove that result?",
+          "expected_behavior": "correct_false_premise",
+          "expected_answer": "Correct the premise: $53.101 billion was Intel's 2024 revenue; 2025 revenue was $52.853 billion. Do not invent a cause for the misstated figure.",
+          "actual_answer": "The excerpts contradict the premise that Intel earned $53.101 billion in revenue in 2025, stating instead that 2025 revenue was $52.9 billion, down $248 million from 2024. This result was driven by Intel Products revenue being roughly flat with 2024, as lower CCG revenue was substantially offset by higher DCAI revenue. CCG revenue decreased 3% due to lower client revenue in the first half of 2025 (driven by lower client volumes from the reduction of incremental incentives offered in the first half of 2024, customer inventory reductions, and supply constraints on internally manufactured wafers, primarily on the Intel 7 process node), while DCAI revenue increased 5% driven by higher server and networking customer-related demand.",
+          "abstained": false,
+          "confidence": 0.9,
+          "score_status": "FAIL",
+          "failure_type": "false_premise_not_corrected",
+          "score_reason": "The expected behavior was to correct the false premise and not invent a cause for the misstated figure. The actual answer accepted the premise regarding what drove the $53.101 billion revenue (treating it as $52.9 billion) and provided reasons from the text, violating the correct_false_premise constraint.",
+          "diagnostic_observation": "Scorer marked false-premise correction as failed; inspect whether corrective evidence was retrieved and used.",
+          "retrieved_pages": [
+            28,
+            28,
+            71,
+            31,
+            71,
+            31,
+            29,
+            29,
+            30,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "name": "indexed_answer_clue_missing_from_top_k",
+      "expected_behavior": "correct_false_premise",
+      "count": 1,
+      "case_ids": [
+        "TC039"
+      ],
+      "categories": [
+        "false_premise"
+      ],
+      "cases": [
+        {
+          "id": "TC039",
+          "category": "false_premise",
+          "question": "Intel Foundry earned $10.318 billion in operating profit in 2025. What drove its success?",
+          "expected_behavior": "correct_false_premise",
+          "expected_answer": "Correct the premise: Intel Foundry reported an operating loss of $10.318 billion, not an operating profit. Do not invent a success explanation.",
+          "actual_answer": "",
+          "abstained": true,
+          "confidence": 1.0,
+          "score_status": "FAIL",
+          "failure_type": "failure_to_correct_false_premise",
+          "score_reason": "The application abstained instead of correcting the false premise.",
+          "diagnostic_observation": "An expected-answer clue occurs in the indexed corpus but not in top-k; consistent with a retrieval miss. The scorer labels this as a false abstention.",
+          "retrieved_pages": [
+            32,
+            32,
+            28,
+            28,
+            30,
+            29,
+            13,
+            79,
+            85,
+            79
+          ]
+        }
+      ]
+    }
+  ]
+}

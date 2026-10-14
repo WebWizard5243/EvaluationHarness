@@ -1,0 +1,175 @@
+{
+  "run_id": "pipeline_20261014_224743",
+  "timestamp": "2026-10-14T22:47:43.976658",
+  "pipeline_status": "SUCCESS",
+  "total_duration_seconds": 1527.27,
+  "dataset": "test_dataset.json",
+  "test_case_count": 50,
+  "run_dir": "runs/pipeline_20261014_224743",
+  "stages": [
+    {
+      "name": "evaluate",
+      "status": "SUCCESS",
+      "duration_seconds": 796.8960809707642,
+      "exit_code": 0,
+      "output_path": "runs/pipeline_20261014_224743/results.jsonl",
+      "log_path": "runs/pipeline_20261014_224743/logs/evaluate.log"
+    },
+    {
+      "name": "scoring",
+      "status": "SUCCESS",
+      "duration_seconds": 337.1640100479126,
+      "exit_code": 0,
+      "output_path": "runs/pipeline_20261014_224743/scores.jsonl",
+      "log_path": "runs/pipeline_20261014_224743/logs/scoring.log"
+    },
+    {
+      "name": "hallucination",
+      "status": "SUCCESS",
+      "duration_seconds": 382.29376006126404,
+      "exit_code": 0,
+      "output_path": "runs/pipeline_20261014_224743/hallucination_results.jsonl",
+      "log_path": "runs/pipeline_20261014_224743/logs/hallucination.log"
+    },
+    {
+      "name": "calibration",
+      "status": "SUCCESS",
+      "duration_seconds": 1.163729190826416,
+      "exit_code": 0,
+      "output_path": "runs/pipeline_20261014_224743/calibration_results.json",
+      "log_path": "runs/pipeline_20261014_224743/logs/calibration.log"
+    },
+    {
+      "name": "cluster",
+      "status": "SUCCESS",
+      "duration_seconds": 9.745877027511597,
+      "exit_code": 0,
+      "output_path": "runs/pipeline_20261014_224743/cluster_summary.json",
+      "log_path": "runs/pipeline_20261014_224743/logs/cluster.log"
+    }
+  ],
+  "metrics": {
+    "evaluation": {
+      "total_scored": 50,
+      "pass_count": 43,
+      "fail_count": 7,
+      "review_count": 0,
+      "pass_rate": 0.86,
+      "categories": {
+        "false_premise": {
+          "total": 7,
+          "pass": 4,
+          "fail": 3,
+          "review": 0,
+          "pass_rate": 0.5714
+        },
+        "irrelevant_context": {
+          "total": 8,
+          "pass": 7,
+          "fail": 1,
+          "review": 0,
+          "pass_rate": 0.875
+        },
+        "paraphrase": {
+          "total": 10,
+          "pass": 9,
+          "fail": 1,
+          "review": 0,
+          "pass_rate": 0.9
+        },
+        "straightforward": {
+          "total": 15,
+          "pass": 14,
+          "fail": 1,
+          "review": 0,
+          "pass_rate": 0.9333
+        },
+        "unanswerable": {
+          "total": 10,
+          "pass": 9,
+          "fail": 1,
+          "review": 0,
+          "pass_rate": 0.9
+        }
+      },
+      "failure_types": {
+        "failure_to_abstain": 1,
+        "failure_to_correct_false_premise": 2,
+        "false_abstention": 2,
+        "false_premise_not_corrected": 1,
+        "incorrect_answer": 1
+      }
+    },
+    "hallucination": {
+      "total_checked": 50,
+      "counts": {
+        "NOT_APPLICABLE": 13,
+        "NOT_ESTABLISHED": 5,
+        "SUPPORTED": 32
+      }
+    },
+    "calibration": {
+      "answered_and_scored_cases": 37,
+      "brier_score": 0.0741,
+      "expected_calibration_error": 0.0757,
+      "plot_path": "runs/pipeline_20261014_224743/calibration_curve.png"
+    },
+    "clustering": {
+      "status": "SUCCESS",
+      "summary_path": "runs/pipeline_20261014_224743/cluster_summary.json",
+      "diagnostics_path": "runs/pipeline_20261014_224743/failure_diagnostics.jsonl",
+      "total_failed": 7,
+      "num_clusters": 5,
+      "cluster_highlights": [
+        {
+          "name": "indexed_answer_clue_missing_from_top_k",
+          "expected_behavior": "answer",
+          "count": 3,
+          "case_ids": [
+            "TC002",
+            "TC019",
+            "TC030"
+          ]
+        },
+        {
+          "name": "answer_clue_in_top_k_but_abstained",
+          "expected_behavior": "correct_false_premise",
+          "count": 1,
+          "case_ids": [
+            "TC040"
+          ]
+        },
+        {
+          "name": "answered_when_abstention_expected",
+          "expected_behavior": "abstain",
+          "count": 1,
+          "case_ids": [
+            "TC049"
+          ]
+        },
+        {
+          "name": "false_premise_not_corrected",
+          "expected_behavior": "correct_false_premise",
+          "count": 1,
+          "case_ids": [
+            "TC034"
+          ]
+        },
+        {
+          "name": "indexed_answer_clue_missing_from_top_k",
+          "expected_behavior": "correct_false_premise",
+          "count": 1,
+          "case_ids": [
+            "TC039"
+          ]
+        }
+      ]
+    }
+  },
+  "reports": {
+    "pipeline_summary_md": "pipeline_20261014_224743/pipeline_summary.md",
+    "cluster_failure_md": "pipeline_20261014_224743/cluster_failure.md"
+  },
+  "warnings": [],
+  "errors": []
+}

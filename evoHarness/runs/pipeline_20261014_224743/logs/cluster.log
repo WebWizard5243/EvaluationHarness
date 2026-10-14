@@ -1,0 +1,17 @@
+=== cluster ===
+Start: 2026-10-14T23:13:01.498329
+Command: /Users/kaif/Web Development/internship/HevaAI/DocumentClassifier/.venv/bin/python /Users/kaif/Web Development/internship/HevaAI/evoHarness/cluster.py --results /Users/kaif/Web Development/internship/HevaAI/evoHarness/runs/pipeline_20261014_224743/results.jsonl --scores /Users/kaif/Web Development/internship/HevaAI/evoHarness/runs/pipeline_20261014_224743/scores.jsonl --dataset /Users/kaif/Web Development/internship/HevaAI/evoHarness/test_dataset.json --output-summary /Users/kaif/Web Development/internship/HevaAI/evoHarness/runs/pipeline_20261014_224743/cluster_summary.json --output-report /Users/kaif/Web Development/internship/HevaAI/evoHarness/runs/pipeline_20261014_224743/cluster_report.md --output-jsonl /Users/kaif/Web Development/internship/HevaAI/evoHarness/runs/pipeline_20261014_224743/failure_diagnostics.jsonl
+
+[INFO] Indexed 126 pages / 1154 chunks.
+
+[INFO] Clustering completed: 7 failed case(s) across 5 cluster(s).
+  - indexed_answer_clue_missing_from_top_k (answer): 3 case(s) -> TC002, TC019, TC030
+  - answer_clue_in_top_k_but_abstained (correct_false_premise): 1 case(s) -> TC040
+  - answered_when_abstention_expected (abstain): 1 case(s) -> TC049
+  - false_premise_not_corrected (correct_false_premise): 1 case(s) -> TC034
+  - indexed_answer_clue_missing_from_top_k (correct_false_premise): 1 case(s) -> TC039
+Saved cluster summary to: /Users/kaif/Web Development/internship/HevaAI/evoHarness/runs/pipeline_20261014_224743/cluster_summary.json
+
+End: 2026-10-14T23:13:11.244063
+Exit code: 0
+Duration: 9.75s

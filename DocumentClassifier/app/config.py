@@ -57,7 +57,7 @@ def load_config() -> Config:
         max_output_tokens = 8192
 
     try:
-        top_k_chunks = int(os.getenv("QA_TOP_K_CHUNKS", "5"))
+        top_k_chunks = int(os.getenv("QA_TOP_K_CHUNKS", "10"))
     except ValueError:
         top_k_chunks = 10
 
